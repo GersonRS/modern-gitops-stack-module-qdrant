@@ -1,0 +1,7 @@
+apiVersion: v2
+dependencies:
+- name: qdrant
+  repository: https://qdrant.to/helm
+  version: "*.*.*"
+name: qdrant
+version: "0"
