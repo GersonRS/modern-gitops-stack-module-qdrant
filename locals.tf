@@ -4,9 +4,7 @@ locals {
 
   helm_values = [{
     qdrant = {
-      replicaCount = 1
-      # nameOverride = ""
-      # fullnameOverride = ""
+      replicaCount = 3
 
       ingress = {
         enabled = true
@@ -20,7 +18,7 @@ locals {
           {
             host = local.domain
             paths = [{
-              path        = "/"
+              path        = "/dashboard"
               pathType    = "Prefix"
               servicePort = 6333
             }]
@@ -28,7 +26,7 @@ locals {
           {
             host = local.domain_full
             paths = [{
-              path        = "/"
+              path        = "/dashboard"
               pathType    = "Prefix"
               servicePort = 6333
             }]
