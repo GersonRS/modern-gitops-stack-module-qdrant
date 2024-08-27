@@ -18,7 +18,7 @@ locals {
           {
             host = local.domain
             paths = [{
-              path        = "/dashboard"
+              path        = "/"
               pathType    = "Prefix"
               servicePort = 6333
             }]
@@ -26,7 +26,7 @@ locals {
           {
             host = local.domain_full
             paths = [{
-              path        = "/dashboard"
+              path        = "/"
               pathType    = "Prefix"
               servicePort = 6333
             }]
