@@ -35,7 +35,7 @@ locals {
           }
         ]
         tls = [{
-          secretName = "minio-tls"
+          secretName = "qdrant-tls"
           hosts = [
             local.domain,
             local.domain_full,
