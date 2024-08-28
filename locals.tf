@@ -70,6 +70,12 @@ locals {
         cluster = {
           enabled : true
         }
+        performance = {
+          max_search_threads : 8
+          max_optimization_threads : 0
+          optimizer_cpu_budget : 8
+          update_rate_limit : null
+        }
       }
 
       metrics = {
