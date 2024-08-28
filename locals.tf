@@ -19,8 +19,8 @@ locals {
       ]
 
       ingress = {
-        enabled = true
-        ingressClassName : ""
+        enabled          = true
+        ingressClassName = ""
         annotations = {
           "cert-manager.io/cluster-issuer"                   = "${var.cluster_issuer}"
           "traefik.ingress.kubernetes.io/router.entrypoints" = "websecure"
@@ -51,7 +51,7 @@ locals {
         }]
       }
 
-      resources : {
+      resources = {
         limits = {
           cpu    = "1000m"
           memory = "1Gi"
@@ -68,19 +68,19 @@ locals {
 
       config = {
         cluster = {
-          enabled : true
+          enabled = true
         }
         performance = {
-          max_search_threads : 8
-          max_optimization_threads : 0
-          optimizer_cpu_budget : 8
-          update_rate_limit : null
+          max_search_threads       = 8
+          max_optimization_threads = 0
+          optimizer_cpu_budget     = 8
+          update_rate_limit        = null
         }
       }
 
       metrics = {
         serviceMonitor = {
-          enabled : var.enable_service_monitor
+          enabled = var.enable_service_monitor
         }
       }
 
