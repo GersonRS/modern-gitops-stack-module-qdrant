@@ -6,6 +6,18 @@ locals {
     qdrant = {
       replicaCount = 3
 
+      env = [
+        {
+          name  = "QDRANT__STORAGE__PERFORMANCE__OPTIMIZER_CPU_BUDGET"
+          value = 8
+        },
+        {
+          name  = "QDRANT__STORAGE__PERFORMANCE__MAX_SEARCH_THREADS"
+          value = 8
+        }
+
+      ]
+
       ingress = {
         enabled = true
         ingressClassName : ""
